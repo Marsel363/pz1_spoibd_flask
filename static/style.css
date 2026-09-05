@@ -1,0 +1,298 @@
+/* Общие стили для всех страниц */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background: #f4f6f8;
+}
+
+/* Адаптивный контейнер - ограничивает ширину контента */
+.container {
+    width: min(1100px, 100% - 32px);
+    margin: 0 auto;
+}
+
+/* Стили шапки сайта */
+.site-header {
+    background: #17324d;
+    color: white;
+    padding: 20px 0;
+}
+
+/* Flexbox для расположения логотипа и меню в одну строку */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: white;
+}
+
+/* Стили навигационного меню */
+.menu {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 6px 14px;
+}
+
+/* Псевдокласс :hover для пунктов меню */
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffd966;
+}
+
+/* Основное содержимое страниц */
+.main-content {
+    padding: 30px 0;
+    min-height: 70vh;
+}
+
+/* Заголовки страниц */
+.page-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #17324d;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+}
+
+/* Стили подвала сайта */
+.site-footer {
+    padding: 24px 0;
+    background: #e8edf2;
+    text-align: center;
+    color: #555;
+    border-top: 1px solid #d0d7de;
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Блок приветствия на главной странице */
+.hero {
+    text-align: center;
+    padding: 50px 20px 40px;
+    background: #17324d;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 10px;
+}
+
+/* Сетка карточек преимуществ с использованием Flexbox */
+.features-grid {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Карточка преимущества - пример блочной модели CSS */
+.feature-card {
+    flex: 1;
+    min-width: 200px;
+    max-width: 320px;
+    background: white;
+    padding: 30px 20px;
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+/* Псевдокласс :hover для карточек */
+.feature-card:hover {
+    background: #f8f9fa;
+    border-color: #17324d;
+}
+
+.feature-card h3 {
+    color: #17324d;
+    margin: 8px 0;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Стили страницы "О проекте" */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px 40px;
+    border: 1px solid #eee;
+}
+
+.about-content h3 {
+    color: #17324d;
+    margin-top: 28px;
+    margin-bottom: 12px;
+}
+
+.tech-list {
+    list-style: none;
+    padding: 0;
+}
+
+.tech-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f2f5;
+    font-size: 0.95rem;
+}
+
+.tech-list li:last-child {
+    border-bottom: none;
+}
+
+/* Стили страницы "Лог изменений" */
+.changelog {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Запись в логе изменений - пример блочной модели CSS */
+.changelog-item {
+    background: white;
+    padding: 20px 30px;
+    margin-bottom: 16px;
+    border-left: 4px solid #e44d26;
+    border: 1px solid #eee;
+    border-left-width: 4px;
+}
+
+/* Псевдокласс :hover для записей лога */
+.changelog-item:hover {
+    background: #f8f9fa;
+}
+
+.changelog-item .version {
+    font-weight: bold;
+    color: #17324d;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.changelog-item p {
+    margin: 4px 0;
+    color: #444;
+}
+
+/* Адаптивность для планшетов (ширина экрана до 768px) */
+@media (max-width: 768px) {
+    /* Меняем расположение элементов шапки на вертикальное */
+    .header-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .menu {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .menu a {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+    .hero h2 {
+        font-size: 1.6rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Карточки выстраиваются вертикально */
+    .features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .page-title {
+        font-size: 1.6rem;
+    }
+
+    .about-content {
+        padding: 20px;
+    }
+
+    .changelog-item {
+        padding: 14px 18px;
+    }
+}
+
+/* Адаптивность для мобильных устройств (ширина экрана до 480px) */
+@media (max-width: 480px) {
+    .container {
+        width: calc(100% - 16px);
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .menu a {
+        font-size: 0.8rem;
+        padding: 4px 10px;
+    }
+
+    .hero {
+        padding: 30px 16px;
+    }
+
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .feature-card {
+        padding: 20px 16px;
+    }
+
+    .changelog-item .version {
+        font-size: 0.95rem;
+    }
+}

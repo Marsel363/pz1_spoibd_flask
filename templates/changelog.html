@@ -1,24 +1,36 @@
 {% extends "base.html" %}
 
-{% block title %}
-Лог изменений
-{% endblock %}
+{% block title %}Лог изменений{% endblock %}
 
 {% block content %}
-<h2>Лог изменений</h2>
+<h1 class="page-title">Лог изменений</h1>
 
-<h3>Версия 0.1</h3>
-<p>Создан первоначальный Flask-проект.</p>
+<div class="changelog">
+    <div class="changelog-item">
+        <span class="version">Версия 0.5</span>
+        <p>Добавлено общее навигационное меню</p>
+        <p>Создан базовый шаблон base.html</p>
+        <p>Выполнено стилевое оформление сайта</p>
+    </div>
 
-<h3>Версия 0.2</h3>
-<p>Добавлена главная страница.</p>
+    <div class="changelog-item">
+        <span class="version">Версия 0.4</span>
+        <p>Добавлена страница «Лог изменений»</p>
+    </div>
 
-<h3>Версия 0.3</h3>
-<p>Добавлена страница «О проекте».</p>
+    <div class="changelog-item">
+        <span class="version">Версия 0.3</span>
+        <p>Добавлена страница «О проекте»</p>
+    </div>
 
-<h3>Версия 0.4</h3>
-<p>Добавлена страница «Лог изменений».</p>
+    <div class="changelog-item">
+        <span class="version">Версия 0.2</span>
+        <p>Добавлена главная страница</p>
+    </div>
 
-<h3>Версия 0.5</h3>
-<p>Добавлено общее навигационное меню.</p>
+    <div class="changelog-item">
+        <span class="version">Версия 0.1</span>
+        <p>Создан первоначальный Flask-проект</p>
+    </div>
+</div>
 {% endblock %}
